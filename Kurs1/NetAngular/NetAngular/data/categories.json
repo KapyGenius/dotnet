@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": "Kapygenius",
+    "Description": "Kapymax",
+    "Dishes": []
+  },
+  {
+    "Id": 2,
+    "Name": "Cremas y sopas",
+    "Description": "Suppen",
+    "Dishes": []
+  },
+  {
+    "Id": 3,
+    "Name": "Tapas",
+    "Description": "Kleine Portionen",
+    "Dishes": []
+  },
+  {
+    "Id": 4,
+    "Name": "Platos principales",
+    "Description": "Hauptgerichte",
+    "Dishes": []
+  },
+  {
+    "Id": 5,
+    "Name": "Postres",
+    "Description": "Desserts",
+    "Dishes": []
+  },
+  {
+    "Id": 6,
+    "Name": "Bebidas",
+    "Description": "Getr\u00E4nke",
+    "Dishes": []
+  }
+]
