@@ -1,0 +1,19 @@
+<div class="form-container" >
+    <mat-form-field>
+        <input matInput placeholder="name" name="name" [(ngModel)]="dish.name" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Beschreibung" name="description" [(ngModel)]="dish.description" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="price" name="price" [(ngModel)]="dish.price" type="number" />
+    </mat-form-field>
+    <mat-select [(value)]="dish.categoryId" >
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{category.name}}
+        </mat-option>
+    </mat-select>
+    <button mat-button (click)="saveDish()">speichern</button>
+    <button mat-button (click)="back()">Abbrechen</button>
+    
+</div>

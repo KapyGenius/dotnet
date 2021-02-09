@@ -16,7 +16,12 @@ import { CategoryService } from './category/category.service';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { DishlistComponent } from './dishlist/dishlist.component';
+import { DishEditComponent } from './dish-edit/dish-edit.component';
+import { DishCreateComponent } from './dish-create/dish-create.component';
 
 
 @NgModule({
@@ -26,6 +31,8 @@ import { DishlistComponent } from './dishlist/dishlist.component';
     HomeComponent,
     CategoryComponent,
     DishlistComponent,
+    DishEditComponent,
+    DishCreateComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,13 +40,18 @@ import { DishlistComponent } from './dishlist/dishlist.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: CategoryComponent, pathMatch: 'full' },
-      {path:'categories/:categoryId/dishes', component:DishlistComponent}
+      {path:'categories/:categoryId/dishes', component:DishlistComponent},
+      {path:'dishes/create', component:DishCreateComponent},
+      {path:'dishes/:dishId', component:DishEditComponent}
       
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]

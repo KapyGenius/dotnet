@@ -13,4 +13,7 @@ export class CategoryService {
   getCategories():Observable<Category[]>{
     return this.https.get<Category[]>("api/category")
   }
+  getCategoryByIdid(id:number):Observable<Category>{
+    return this.https.get<Category>(`api/category/${id}`)
+  }
 }
